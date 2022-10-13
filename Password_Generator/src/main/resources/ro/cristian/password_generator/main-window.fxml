@@ -6,12 +6,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import com.sun.javafx.scene.control.InputField?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="ro.cristian.password_generator.MainController"
             prefHeight="400.0" prefWidth="600.0">
 
     <VBox alignment="CENTER">
-        <RadioButton onAction="#radioHelp"></RadioButton>
+        <RadioButton onMousePressed="#lowerCasePressed"></RadioButton>
+        <RadioButton onMousePressed="#upperCasePressed"></RadioButton>
+        <RadioButton onMousePressed="#numberPressed"></RadioButton>
+        <RadioButton onMousePressed="#sCharacterPressed"></RadioButton>
+        <TextField fx:id="lengthInput"></TextField>
+        <Button text="Generate password" onMouseClicked="#generatePassword"></Button>
     </VBox>
 </AnchorPane>
