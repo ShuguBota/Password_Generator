@@ -51,15 +51,14 @@ public class Password {
 
         if(sCharacters){
             for(int i=0; i< sCharactersPosible.length; i++){
-                posibleCharacters[currentPos]=numbersPosible[i];
+                posibleCharacters[currentPos]=sCharactersPosible[i];
                 currentPos++;
             }
         }
 
         for(int i=1; i<=length; i++){
             Random r = new Random();
-            int x = r.nextInt(posibleCharacters.length-1);
-            System.out.println(x);
+            int x = r.nextInt(currentPos-1);
             password = password.concat(posibleCharacters[x]);
         }
 

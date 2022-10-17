@@ -19,5 +19,6 @@
         <RadioButton onMousePressed="#sCharacterPressed"></RadioButton>
         <TextField fx:id="lengthInput"></TextField>
         <Button text="Generate password" onMouseClicked="#generatePassword"></Button>
+        <Label fx:id="lastPasswordGenerated"></Label>
     </VBox>
 </AnchorPane>

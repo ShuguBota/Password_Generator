@@ -1,6 +1,7 @@
 package ro.cristian.password_generator;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -12,12 +13,14 @@ public class MainController {
     private boolean sCharacterB;
     @FXML
     TextField lengthInput;
+    @FXML
+    Label lastPasswordGenerated;
 
     @FXML
     private void generatePassword(){
         System.out.println("A new password needs to be generated");
-        Password passowrd = new Password(Integer.parseInt(lengthInput.getText()), lowerCaseB, upperCaseB, numberB, sCharacterB);
-        System.out.println(passowrd.generatePassword());
+        Password password = new Password(Integer.parseInt(lengthInput.getText()), lowerCaseB, upperCaseB, numberB, sCharacterB);
+        lastPasswordGenerated.setText(password.generatePassword());
     }
 
     public void lowerCasePressed(MouseEvent mouseEvent) {
